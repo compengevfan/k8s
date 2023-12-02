@@ -27,6 +27,7 @@ spec:
             - mountPath: /var/lib/postgresql/data
               name: postgredb
               subPath: postgres
+      serviceAccountName: "postgres-sa"
       volumes:
         - name: postgredb
           persistentVolumeClaim:
