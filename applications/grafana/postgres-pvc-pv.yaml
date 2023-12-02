@@ -1,0 +1,31 @@
+# kind: PersistentVolume
+# apiVersion: v1
+# metadata:
+#   name: postgres-pv-volume  # Sets PV's name
+#   labels:
+#     type: local  # Sets PV's type to local
+#     app: postgres
+# spec:
+#   storageClassName: iscsi-storage2-nvme
+#   capacity:
+#     storage: 5Gi # Sets PV Volume
+#   accessModes:
+#     - ReadWriteOnce
+#   hostPath:
+#     path: "/mnt/data"
+# ---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgres-pv-claim  # Sets name of PVC
+  namespace: grafana
+  labels:
+    app: postgres
+spec:
+  storageClassName: iscsi-storage2-nvme
+  accessModes:
+    - ReadWriteOnce  # Sets read and write access
+  resources:
+    requests:
+      storage: 10Gi  # Sets volume size
+  volumeMode: Filesystem

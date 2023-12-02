@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
         - name: postgres
+          securityContext:
+            runAsUser: 0
           image: postgres:10.1 # Sets Image
           imagePullPolicy: "IfNotPresent"
           ports:
@@ -23,9 +25,9 @@ spec:
                 name: postgres-config
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
-              name: postgres-pv-claim
+              name: postgredb
               subPath: postgres
       volumes:
-        - name: postgres-pv-claim
+        - name: postgredb
           persistentVolumeClaim:
             claimName: postgres-pv-claim
