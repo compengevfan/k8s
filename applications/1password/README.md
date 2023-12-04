@@ -1,6 +1,8 @@
 Web User Guide: 
 https://developer.1password.com/docs/k8s/k8s-operator/?deployment-type=manual
 
+You will need "1password-credentials.json" which can be obtained from 1password.com
+
 To Create the “op-credentials” secret, do this, not what’s in the web guide
 cat 1password-credentials.json | base64 | tr '/+' '_-' | tr -d '=' | tr -d '\n' > op-session
 
