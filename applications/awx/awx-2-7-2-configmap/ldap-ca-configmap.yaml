@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ldap-ca-crt
+  namespace: awx
+type: Opaque 
+valueFrom:
+  configMapKeyRef:
+      name: evorigin-ca
+      key: ca-bundle.crt
