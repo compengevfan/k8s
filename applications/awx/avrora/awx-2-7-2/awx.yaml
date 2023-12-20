@@ -7,7 +7,7 @@ spec:
   service_type: clusterip
   ingress_type: Route
   ldap_cacert_secret: ldap-ca-crt
-  ldap_bind_password: bind-ldap-password
+  ldap_password_secret: bind-ldap-password
   postgres_storage_class: iscsi-storage2-nvme
   projects_storage_class: iscsi-storage2-nvme
   route_host: awx.apps.avrora.evorigin.com
