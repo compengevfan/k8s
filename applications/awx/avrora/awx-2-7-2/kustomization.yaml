@@ -14,9 +14,3 @@ images:
 
 # Specify a custom namespace in which to install AWX
 namespace: awx
-
-secretGenerator:
-  - name: ldap-ca-crt
-    files:
-      - ldap-ca.crt=./ca.crt
-    type: "Opaque"
