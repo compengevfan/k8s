@@ -10,7 +10,7 @@ spec:
   ldap_password_secret: bind-ldap-password
   postgres_storage_class: iscsi-storage2-nvme
   projects_storage_class: iscsi-storage2-nvme
-  route_host: awx.apps.okd.evorigin.com
+  route_host: awx.apps.avrora.evorigin.com
   no_log: false
   extra_settings:
     - setting: AUTH_LDAP_SERVER_URI
