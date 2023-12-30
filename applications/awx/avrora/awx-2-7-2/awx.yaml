@@ -15,7 +15,7 @@ spec:
   extra_settings:
     - setting: AUTH_LDAP_SERVER_URI
       value: >-
-        "ldaps://jax-evodc003.evorigin.com:636,ldaps://jax-evodc004.evorigin.com:636"
+        "ldaps://jax-evodc003.evorigin.com:636 ldaps://jax-evodc004.evorigin.com:636"
   
     - setting: AUTH_LDAP_BIND_DN
       value: >-
@@ -28,7 +28,7 @@ spec:
       value: 'LDAPSearch("dc=evorigin,dc=com","SCOPE_SUBTREE","(objectClass=group)",)'
   
     - setting: AUTH_LDAP_GROUP_TYPE
-      value: 'GroupOfNamesType'
+      value: 'GroupOfNamesType()'
   
     - setting: AUTH_LDAP_USER_ATTR_MAP
       value: '{"first_name": "givenName","last_name": "sn"}'
