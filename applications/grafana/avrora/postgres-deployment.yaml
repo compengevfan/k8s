@@ -17,7 +17,7 @@ subjects:
   name: postgres-sa
   namespace: grafana
 roleRef:
-  kind: Role
+  kind: ClusterRole
   name: system:openshift:scc:anyuid
   apiGroup: rbac.authorization.k8s.io
 
