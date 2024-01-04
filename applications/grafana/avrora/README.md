@@ -1,8 +1,6 @@
 ##postgres
 
-#kubectl apply -f postgres-config.yaml #clear text passwords bad, replacing with secret
-
-kubectl apply -f postgres-secret.yaml #needs to be figured out, preferrably obtained from 1password
+kubectl apply -f postgres-db-creds.yaml
 
 kubectl apply -f postgres-pvc-pv.yaml
 
