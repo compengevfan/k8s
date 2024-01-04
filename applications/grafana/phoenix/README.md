@@ -1,15 +1,13 @@
 ##postgres
 
-#kubectl apply -f postgres-config.yaml #clear text passwords bad, replacing with secret
+kubectl apply -f postgres-db-creds.yaml --namespace=grafana
 
-kubectl apply -f postgres-secret.yaml #needs to be figured out, preferrably obtained from 1password
+kubectl apply -f postgres-pvc-pv.yaml --namespace=grafana
 
-kubectl apply -f postgres-pvc-pv.yaml
+kubectl apply -f postgres-deployment.yaml #--namespace=grafana
 
-kubectl apply -f postgres-deployment.yaml
-
-kubectl apply -f postgres-service.yaml
+kubectl apply -f postgres-service.yaml --namespace=grafana
 
 ##grafana
 
-kubectl apply -f grafana-clusterip.yaml
+kubectl apply -f grafana-clusterip.yaml --namespace=grafana
