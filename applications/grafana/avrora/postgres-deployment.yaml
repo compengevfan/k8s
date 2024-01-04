@@ -18,7 +18,7 @@ subjects:
   namespace: grafana
 roleRef:
   kind: Role
-  name: system:openshift:scc:anyuid
+  name: anyuid
   apiGroup: rbac.authorization.k8s.io
 
 
