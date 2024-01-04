@@ -34,20 +34,20 @@ spec:
         - name: grafana
           image: grafana/grafana:latest
           imagePullPolicy: IfNotPresent
-          env:
-          - name: GF_DATABASE_TYPE
-            value: postgres
-          - name: GF_DATABASE_HOST
-            value: postgres
-          - name: GF_DATABASE_NAME
-            value: grafana
-          - name: GF_DATABASE_USER
-            value: postgres_user
-          - name: GF_DATABASE_PASSWORD
-            valueFrom: 
-              secretKeyRef:
-                name: postgres-db-creds
-                key: password
+          # env:
+          # - name: GF_DATABASE_TYPE
+          #   value: postgres
+          # - name: GF_DATABASE_HOST
+          #   value: postgres
+          # - name: GF_DATABASE_NAME
+          #   value: grafana
+          # - name: GF_DATABASE_USER
+          #   value: postgres_user
+          # - name: GF_DATABASE_PASSWORD
+          #   valueFrom: 
+          #     secretKeyRef:
+          #       name: postgres-db-creds
+          #       key: password
           ports:
             - containerPort: 3000
           readinessProbe:
