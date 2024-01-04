@@ -57,6 +57,10 @@ spec:
               secretKeyRef:
                 name: postgres-db-creds
                 key: password
+          resources:
+            limits:
+              cpu: 250m
+              memory: 750Mi
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: postgredb
