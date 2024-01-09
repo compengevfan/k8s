@@ -7,7 +7,7 @@ metadata:
   labels:
     app: postgres
 spec:
-  storageClassName: iscsi-storage2-nvme
+  storageClassName: iscsi-storage1-nvme
   accessModes:
     - ReadWriteOnce  # Sets read and write access
   resources:

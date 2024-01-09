@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: iscsi-storage2-nvme
+  storageClassName: iscsi-storage1-nvme
   resources:
     requests:
       storage: 8Gi
@@ -27,13 +27,27 @@ spec:
         app: grafana
     spec:
       securityContext:
-        fsGroup: 1000650000
-        supplementalGroups:
-          - 0
+        fsGroup: 1000660000
+        # supplementalGroups:
+        #   - 0
       containers:
         - name: grafana
           image: grafana/grafana:latest
           imagePullPolicy: IfNotPresent
+          # env:
+          # - name: GF_DATABASE_TYPE
+          #   value: postgres
+          # - name: GF_DATABASE_HOST
+          #   value: postgres
+          # - name: GF_DATABASE_NAME
+          #   value: grafana
+          # - name: GF_DATABASE_USER
+          #   value: postgres_user
+          # - name: GF_DATABASE_PASSWORD
+          #   valueFrom: 
+          #     secretKeyRef:
+          #       name: postgres-db-creds
+          #       key: password
           ports:
             - containerPort: 3000
           readinessProbe:
@@ -55,7 +69,7 @@ spec:
               port: 3000
             timeoutSeconds: 1
           resources:
-            requests:
+            limits:
               cpu: 250m
               memory: 750Mi
           volumeMounts:

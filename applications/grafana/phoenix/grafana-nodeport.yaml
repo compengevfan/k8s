@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: iscsi-storage2-nvme
+  storageClassName: iscsi-storage1-nvme
   resources:
     requests:
       storage: 1Gi
