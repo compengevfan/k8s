@@ -12,4 +12,4 @@
 
 ##grafana
 
-./kubectl apply -f /home/ladmin/git/k8s/applications/grafana/phoenix/grafana-clusterip.yaml
+./kubectl apply -f /home/ladmin/git/k8s/applications/grafana/phoenix/grafana-clusterip.yaml --namespace=grafana
