@@ -18,7 +18,7 @@ subjects:
   namespace: grafana
 roleRef:
   kind: ClusterRole
-  name: system:openshift:scc:anyuid
+  name: priviledged
   apiGroup: rbac.authorization.k8s.io
 
 
