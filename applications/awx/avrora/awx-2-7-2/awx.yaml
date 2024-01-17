@@ -8,8 +8,8 @@ spec:
   ingress_type: Route
   ldap_cacert_secret: ldap-ca-crt
   ldap_password_secret: bind-ldap-password
-  postgres_storage_class: storage2-nvme-vcp-immediate
-  projects_storage_class: storage2-nvme-vcp-immediate
+  postgres_storage_class: storage1-nvme-vcp-immediate
+  projects_storage_class: storage1-nvme-vcp-immediate
   route_host: awx.apps.avrora.evorigin.com
   no_log: false
   extra_settings:
