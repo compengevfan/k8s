@@ -6,4 +6,4 @@ provisioner: kubernetes.io/vsphere-volume
 parameters:
   datastore: iSCSI-Storage1-NVMe
 reclaimPolicy: Delete
-volumeBindingMode: Immediate
+volumeBindingMode: WaitForFirstConsumer
