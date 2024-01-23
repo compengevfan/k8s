@@ -27,7 +27,7 @@ spec:
         app: grafana
     spec:
       securityContext:
-        fsGroup: 1000680000
+        fsGroup: 1000700000
         # supplementalGroups:
         #   - 0
       containers:
