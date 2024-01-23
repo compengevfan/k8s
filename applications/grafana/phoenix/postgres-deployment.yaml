@@ -61,12 +61,14 @@ spec:
               secretKeyRef:
                 name: postgres-db-creds
                 key: password
+          - name: PGDATA
+            value: /var/lib/postgresql/data/pgdata
           resources:
             limits:
               cpu: 250m
               memory: 750Mi
           volumeMounts:
-            - mountPath: /var/lib/postgresql/pgdata
+            - mountPath: /var/lib/postgresql/data
               name: postgres-persistent-storage
       # serviceAccountName: "postgres-sa"
       volumes:
