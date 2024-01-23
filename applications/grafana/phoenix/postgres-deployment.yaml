@@ -1,9 +1,9 @@
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: postgres-sa
-  namespace: grafana
+# ---
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   name: postgres-sa
+#   namespace: grafana
 #automountServiceAccountToken: false
 
 # ---
@@ -44,8 +44,8 @@ spec:
           securityContext:
             runAsUser: 1000700000
             runAsGroup: 1000700000
-            privileged: false
-            runAsNonRoot: true
+            # privileged: false
+            # runAsNonRoot: true
           image: postgres:latest # Sets Image
           imagePullPolicy: "IfNotPresent"
           ports:
@@ -68,7 +68,7 @@ spec:
             - mountPath: /var/lib/postgresql/data
               name: postgredb
               subPath: postgres
-      serviceAccountName: "postgres-sa"
+      # serviceAccountName: "postgres-sa"
       volumes:
         - name: postgredb
           persistentVolumeClaim:
