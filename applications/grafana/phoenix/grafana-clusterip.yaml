@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: storage1-nvme-vcp-immediate
+  storageClassName: storage2-nvme-vcp-immediate
   resources:
     requests:
       storage: 8Gi
