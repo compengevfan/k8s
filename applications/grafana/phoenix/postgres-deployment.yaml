@@ -42,7 +42,7 @@ spec:
       containers:
         - name: postgres
           securityContext:
-          #   runAsUser: 0
+            runAsUser: 1000700000
             runAsNonRoot: true
           image: postgres:latest # Sets Image
           imagePullPolicy: "IfNotPresent"
