@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: postgres-pv-volume
   labels:
+    type: local
     app: postgres
 spec:
   storageClassName: storage2-nvme-vcp-immediate
