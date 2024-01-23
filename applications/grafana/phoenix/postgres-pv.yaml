@@ -3,7 +3,6 @@ kind: PersistentVolume
 metadata:
   name: postgres-pv-volume
   labels:
-    type: local
     app: postgres
 spec:
   storageClassName: storage2-nvme-vcp-immediate
@@ -11,6 +10,7 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteMany
-  # hostPath: # hostPath PersistentVolume is used for development and testing. It uses a file/directory on the Node to emulate network-attached storage
+  hostPath: # hostPath PersistentVolume is used for development and testing. It uses a file/directory on the Node to emulate network-attached storage
   #   path: "/mnt/data"
   persistentVolumeReclaimPolicy: Retain # Retain the PV even after PVC is deleted. 
+  volumeMode: Filesystem
