@@ -38,15 +38,16 @@ spec:
       namespace: grafana
       labels:
         app: postgres
+    securityContext:
+      runAsUser: 1000700000
+      runAsGroup: 1000700000
+      runAsNonRoot: true
+      fsGroup: 1000700000
+      fsGroupChangePolicy: Always
     spec:
       containers:
         - name: postgres
-          securityContext:
-            runAsUser: 1000700000
-            runAsGroup: 1000700000
-            runAsNonRoot: true
-            fsGroup: 1000700000
-            fsGroupChangePolicy: Always
+
           image: postgres:latest # Sets Image
           imagePullPolicy: "IfNotPresent"
           ports:
