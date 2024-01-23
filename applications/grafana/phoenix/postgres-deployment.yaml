@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: image-registry.openshift-image-registry.svc:5000/postgres/build-postgres:latest # Sets Image
+          image: postgres:latest # Sets Image
           imagePullPolicy: "Always"
           ports:
             - containerPort: 5432  # Exposes container port
@@ -66,7 +66,7 @@ spec:
               cpu: 250m
               memory: 750Mi
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
+            - mountPath: /var/lib/postgresql/pgdata
               name: postgres-persistent-storage
       # serviceAccountName: "postgres-sa"
       volumes:
