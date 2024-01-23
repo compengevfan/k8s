@@ -44,7 +44,7 @@ spec:
           securityContext:
             runAsUser: 1000700000
             runAsGroup: 1000700000
-            # privileged: true
+            privileged: true
             runAsNonRoot: false
           image: postgres:latest # Sets Image
           imagePullPolicy: "IfNotPresent"
