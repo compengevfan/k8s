@@ -54,8 +54,8 @@ spec:
           env:
           - name: POSTGRES_DB
             value: grafana
-          - name: POSTGRES_USER
-            value: postgres_user
+          # - name: POSTGRES_USER
+          #   value: postgres_user
           - name: POSTGRES_PASSWORD
             valueFrom: 
               secretKeyRef:
