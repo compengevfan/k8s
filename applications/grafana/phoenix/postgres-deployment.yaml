@@ -21,6 +21,12 @@
 #   name: system:openshift:scc:anyuid
 #   apiGroup: rbac.authorization.k8s.io
 
+# securityContext:
+#   runAsUser: 1000700000
+#   runAsGroup: 1000700000
+#   runAsNonRoot: true
+#   fsGroup: 1000700000
+#   fsGroupChangePolicy: Always
 
 ---
 apiVersion: apps/v1
@@ -38,12 +44,6 @@ spec:
       namespace: grafana
       labels:
         app: postgres
-    securityContext:
-      runAsUser: 1000700000
-      runAsGroup: 1000700000
-      runAsNonRoot: true
-      fsGroup: 1000700000
-      fsGroupChangePolicy: Always
     spec:
       containers:
         - name: postgres
