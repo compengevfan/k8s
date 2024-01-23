@@ -9,8 +9,8 @@ metadata:
 spec:
   storageClassName: storage2-nvme-vcp-immediate
   accessModes:
-    - ReadWriteOnce  # Sets read and write access
+    - ReadWriteMany  # Sets read and write access
   resources:
     requests:
       storage: 10Gi  # Sets volume size
-  volumeMode: Filesystem
+  # volumeMode: Filesystem
