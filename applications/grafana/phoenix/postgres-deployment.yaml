@@ -47,8 +47,8 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:latest # Sets Image
-          imagePullPolicy: "IfNotPresent"
+          image: image-registry.openshift-image-registry.svc:5000/postgres/build-postgres:latest # Sets Image
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 5432  # Exposes container port
           env:
