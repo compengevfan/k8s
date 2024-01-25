@@ -44,7 +44,7 @@ spec:
           image: mongo:6.0 # Sets Image
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 3306  # Exposes container port
+            - containerPort: 27017  # Exposes container port
           env:
           - name: MONGO_INITDB_DATABASE
             value: mongodbdatabase
