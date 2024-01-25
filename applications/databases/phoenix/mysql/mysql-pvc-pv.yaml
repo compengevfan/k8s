@@ -7,7 +7,7 @@ metadata:
   labels:
     app: mysql
 spec:
-  storageClassName: storage1-nvme-vcp-immediate
+  storageClassName: storage2-nvme-vcp-immediate
   accessModes:
     - ReadWriteOnce  # Sets read and write access
   resources:
