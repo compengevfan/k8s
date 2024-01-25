@@ -53,7 +53,7 @@ spec:
               secretKeyRef:
                 name: mongodb-k8s-root-password
                 key: username
-          - name: mongodb_ROOT_PASSWORD
+          - name: MONGO_INITDB_ROOT_PASSWORD
             valueFrom: 
               secretKeyRef:
                 name: mongodb-k8s-root-password
