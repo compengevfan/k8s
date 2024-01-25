@@ -44,7 +44,7 @@ spec:
           image: mysql:8.3 # Sets Image
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 8080  # Exposes container port
+            - containerPort: 3306  # Exposes container port
           env:
           - name: MYSQL_DATABASE
             value: mysqldatabase
@@ -58,11 +58,9 @@ spec:
               cpu: 250m
               memory: 750Mi
           volumeMounts:
-            - mountPath: /var/lib/mysqlql/data
-              name: postgredb
-              subPath: mysql
-      serviceAccountName: "mysql-sa"
+            - mountPath: /var/lib/mysql
+              name: mysqldb
       volumes:
-        - name: postgredb
+        - name: mysqldb
           persistentVolumeClaim:
             claimName: mysql-pv-claim
