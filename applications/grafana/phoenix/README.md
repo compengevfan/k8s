@@ -1,4 +1,4 @@
-##postgres
+##mysql
 
 kubectl create namespace grafana
 
