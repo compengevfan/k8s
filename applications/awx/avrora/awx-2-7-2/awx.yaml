@@ -22,7 +22,7 @@ spec:
         "CN=svcLDAP,OU=Service Accounts,DC=evorigin,DC=com"
   
     - setting: AUTH_LDAP_USER_SEARCH
-      value: 'LDAPSearch("OU=Chris,DC=evorigin,DC=com","SCOPE_SUBTREE","(sAMAccountName=%(user)s)",)'
+      value: 'LDAPSearch("DC=evorigin,DC=com","SCOPE_SUBTREE","(sAMAccountName=%(user)s)",)'
   
     - setting: AUTH_LDAP_GROUP_SEARCH
       value: 'LDAPSearch("dc=evorigin,dc=com","SCOPE_SUBTREE","(objectClass=group)",)'
