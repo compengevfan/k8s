@@ -2,7 +2,7 @@
 
 kubectl create namespace grafana
 
-kubectl apply -f /home/ladmin/git/k8s/applications/grafana/avrora/mysql-db-creds.yaml
+kubectl apply -f /home/ladmin/git/k8s/applications/grafana/avrora/mysql-db-creds-vault.yaml
 
 kubectl apply -f /home/ladmin/git/k8s/applications/grafana/avrora/mysql-pvc-pv.yaml
 
