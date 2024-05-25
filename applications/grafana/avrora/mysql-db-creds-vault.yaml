@@ -9,7 +9,7 @@ spec:
     name: vault-backend
     kind: ClusterSecretStore
   data:
-  - secretKey: ldap-ca.crt
+  - secretKey: password
     remoteRef:
       key: k8s/mysql/root
       property: password
