@@ -1,6 +1,6 @@
 ---
 apiVersion: onepassword.com/v1
-kind: OnePasswordItem
+kind: ExternalSecret
 metadata:
   name: mysql-k8s-root-password
   namespace: grafana
