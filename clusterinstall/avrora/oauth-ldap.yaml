@@ -38,7 +38,7 @@ spec:
         id: 
         - dn
         email: 
-        - mail
+        - UserPrincipalName
         name: 
         - cn
         preferredUsername: 
