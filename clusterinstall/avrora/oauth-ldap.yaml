@@ -42,7 +42,7 @@ spec:
         name: 
         - cn
         preferredUsername: 
-        - uid
+        - UserPrincipalName
       bindDN: svcLDAP
       bindPassword: 
         name: bind-ldap-password
