@@ -47,4 +47,4 @@ spec:
       bindPassword: 
         name: bind-ldap-password
       insecure: true 
-      url: ldap://evorigin.com:389/dc=evorigin,dc=com?uid
+      url: ldap://evorigin.com:389/dc=evorigin,dc=com?UserPrincipalName
