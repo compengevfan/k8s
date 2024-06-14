@@ -40,7 +40,7 @@ spec:
         email: 
         - UserPrincipalName
         name: 
-        - cn
+        - name
         preferredUsername: 
         - UserPrincipalName
       bindDN: svcLDAP
