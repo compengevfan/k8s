@@ -38,13 +38,13 @@ spec:
         id: 
         - dn
         email: 
-        - userPrincipalName
+        - UserPrincipalName
         name: 
         - name
         preferredUsername: 
-        - userPrincipalName
+        - UserPrincipalName
       bindDN: svcLDAP
       bindPassword: 
         name: bind-ldap-password
       insecure: true 
-      url: ldap://evorigin.com:389/dc=evorigin,dc=com?userPrincipalName
+      url: ldap://evorigin.com:389/dc=evorigin,dc=com?UserPrincipalName
